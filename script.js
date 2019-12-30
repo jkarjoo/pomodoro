@@ -33,16 +33,36 @@ menubtn.addEventListener("click", function() {
     (!menubtn.classList.contains("active")) ? openMenu() : closeMenu();
 });
 
+// Temp values to record whether changes were made during menu 
+let tempWork;
+let tempBreak;
+
 function openMenu() {
     menubtn.classList.add("active");
     modal.classList.add("active");
     container.classList.add("inactive");
+    tempWork = workMinutes;
+    tempBreak = breakMinutes;
 }
 
 function closeMenu() {
     menubtn.classList.remove("active");
     modal.classList.remove("active");
     container.classList.remove("inactive");
+
+    // Check for changes if so, update display
+    if (tempWork !== workMinutes && timer.status === "Work"){
+    updateValues();
+    }
+    else if (tempBreak !== breakMinutes && timer.status === "Break") {
+        updateValues();
+    }
+    else if (tempWork !== workMinutes) {
+        updateWorkTime();
+    }
+    else if (tempBreak !== breakMinutes) {
+        updateBreakTime();
+    }
 }
 
 playbtn.addEventListener("click", function() {
@@ -67,17 +87,25 @@ window.setInterval(function() {
         timer.breakTime -= 1;
     }
     updateDisplay();
-}, 1000);
+}, 10);
 
 resetbtn.addEventListener("click", function() {
-    resetValues();
+    updateValues();
     pause();
     updateDisplay();
 });
 
-function resetValues() {
+function updateValues() {
     timer.workTime = workMinutes * 60;
     timer.breakTime = breakMinutes * 60;
+}
+
+function updateBreakTime() {
+    timer.breakTime = breakMinutes * 60;
+}
+
+function updateWorkTime() {
+    timer.workTime = workMinutes * 60;
 }
 
 function updateDisplay() {
@@ -114,7 +142,7 @@ function updateStatus() {
     else {
         timer.status = "Work";
         bodyDisplay.style.backgroundColor = "#ffdfdf";
-        resetValues();
+        updateValues();
     }
 }
 
