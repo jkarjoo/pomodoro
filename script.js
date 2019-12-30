@@ -87,7 +87,7 @@ window.setInterval(function() {
         timer.breakTime -= 1;
     }
     updateDisplay();
-}, 10);
+}, 1000);
 
 resetbtn.addEventListener("click", function() {
     updateValues();
