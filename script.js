@@ -138,11 +138,13 @@ function updateStatus() {
     if (timer.status === "Work") {
         timer.status = "Break";
         bodyDisplay.style.backgroundColor = "#e5d9fd";
+        alert("It's time to Break!");
     }
     else {
         timer.status = "Work";
         bodyDisplay.style.backgroundColor = "#ffdfdf";
         updateValues();
+        alert("It's time to get back to Work!");
     }
 }
 
