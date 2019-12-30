@@ -47,11 +47,11 @@ body {
 }
 
 .menuBar, .play, .reset, .time, .current-state {
-    opacity: 65%;
+    opacity: 0.65;
 }
 
 .menuBar:hover, .play:hover, .reset:hover {
-    opacity: 83%;
+    opacity: 0.83;
 }
 
 .play {
@@ -130,11 +130,11 @@ body {
 }
 
 .workIncrement, .breakIncrement, .workDecrement, .breakDecrement, .work-time, .break-time, .stateOption {
-   opacity: 65%; 
+   opacity: 0.65; 
 }
 
 .workIncrement:hover, .breakIncrement:hover, .workDecrement:hover, .breakDecrement:hover {
-    opacity: 83%;
+    opacity: 0.83;
 }
 
 .workDecrement, .breakDecrement {
@@ -143,7 +143,7 @@ body {
 
 /* If modal is active */
 .container.inactive {
-    opacity: 5%;
+    opacity: 0.05;
 }
 
 
