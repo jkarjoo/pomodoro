@@ -1,0 +1,161 @@
+/* Github Icon */
+.github-corner:hover .octo-arm{
+    animation:octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave{
+    0%,100%{
+        transform:rotate(0)
+    }20%,60%{
+        transform:rotate(-25deg)
+    }40%,80%{
+        transform:rotate(10deg)
+    }
+}
+@media (max-width:500px){.github-corner:hover .octo-arm{
+        animation:none
+}
+.github-corner .octo-arm{
+    animation:octocat-wave 560ms ease-in-out
+}}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    background-color: #ffdfdf;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+/* Homepage Buttons */
+.menuBar {
+    position: fixed;
+    background-image: url('icons/menu.svg');
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.menuBar.active {
+    background-image: url('icons/close.svg');
+}
+
+.menuBar, .play, .reset, .time, .current-state {
+    opacity: 65%;
+}
+
+.menuBar:hover, .play:hover, .reset:hover {
+    opacity: 83%;
+}
+
+.play {
+    background-image: url('icons/pause.svg');
+    float: left;
+    transition: all 0.4s ease;
+}
+
+.play.paused {
+    background-image: url('icons/play.svg');
+}
+
+.reset {
+    background-image: url('icons/reset.svg');
+    float: right;
+    transition: all 0.4s ease;
+}
+
+.reset:hover {
+    transform: rotate(90deg);
+}
+
+/* Timer container */
+.container, .container.inactive {
+    width: 300px;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    border-bottom: 3px solid #151513A6;
+}
+
+/* Homepage Content */
+.current-state {
+    display: inline-block;
+    font-size: 38px;
+}
+
+.time {
+    font-size: 120px;
+}
+
+/* Modal Items */
+.modal {
+    display: none;
+    width: 300px;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -45%);
+    text-align: center;
+    z-index: 1;
+    font-size: 30px;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-content {
+    margin: 15px;
+}
+
+/* Modal Time options */
+.work-time, .break-time {
+    width: 68px;
+    font-size: 65px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Modal buttons */
+.workIncrement, .breakIncrement, .workDecrement, .breakDecrement {
+    background-image: url('icons/play.svg');
+}
+
+.workIncrement, .breakIncrement, .workDecrement, .breakDecrement, .work-time, .break-time, .stateOption {
+   opacity: 65%; 
+}
+
+.workIncrement:hover, .breakIncrement:hover, .workDecrement:hover, .breakDecrement:hover {
+    opacity: 83%;
+}
+
+.workDecrement, .breakDecrement {
+    transform: rotate(180deg);
+}
+
+/* If modal is active */
+.container.inactive {
+    opacity: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
