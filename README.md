@@ -17,7 +17,7 @@ This is a tool to help manage your time and get the most out of it!
 ## Demo
 
 Here is the working live demo:
-[https://justinkar.github.io/pomodoro/](https://justinkar.github.io/pomodoro/).
+[https://jkarjoo.github.io/pomodoro/](https://jkarjoo.github.io/pomodoro/).
 
 ## Technologies
 
